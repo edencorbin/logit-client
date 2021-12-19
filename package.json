@@ -4,7 +4,7 @@
     "url": "https://github.com/edencorbin/logit-client.git"
   },
   "name": "cb-logit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "client side easy logging library",
   "main": "index.js",
   "scripts": {
