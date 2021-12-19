@@ -6,23 +6,22 @@ class logger {
     _api_key = ''
     _endpoint = ''
 
-    logger(api_key, endpoint){
+    constructor(api_key, endpoint) {  // Constructor
         this._api_key = api_key
         this._endpoint = endpoint
     }
 
-    handleLog = (logs, level, context) => {
+    handleLog = (logs, level) => {
         try{
             const headers = {
                 headers: {
-                    'Accept': 'application/json'
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + this._api_key
                 }
             }
             const data = {
                 logs, 
-                level,
-                context,
-                api_key: this.api_key,
+                level
             }
             axios.post(this._endpoint, data, headers)
         }
@@ -31,6 +30,5 @@ class logger {
         }
     }
 }
-
 
 module.exports = logger
