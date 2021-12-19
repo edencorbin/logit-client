@@ -1,5 +1,9 @@
 {
-  "name": "@corbinbrooks/logit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edencorbin/logit-client.git"
+  },
+  "name": "cb-logit",
   "version": "1.0.0",
   "description": "client side easy logging library",
   "main": "index.js",
